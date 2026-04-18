@@ -297,17 +297,10 @@ with col2:
 
 # ── 債券工具 ──
 st.markdown('<div class="section-label">📈 債券工具</div>', unsafe_allow_html=True)
-col3, col4 = st.columns(2)
 
-with col3:
-    tool_card("📉", "常賣債券績效比較",
-              "本行常見債券歷史績效走勢比較，含息總報酬分析",
-              "https://bond-backtest-dnubuhdxkunvwf6fdhsnv3.streamlit.app/")
-
-with col4:
-    tool_card("💰", "雙元貨幣 (DCI) 回測",
-              "DCI 歷史勝率與各情境回測分析",
-              "https://edltm57vf5rtwkpeewcsb7.streamlit.app/")
+tool_card("📉", "常賣債券績效比較",
+          "本行常見債券歷史績效走勢比較，含息總報酬分析",
+          "https://bond-backtest-dnubuhdxkunvwf6fdhsnv3.streamlit.app/")
 
 # ── 投資組合工具 ──
 st.markdown('<div class="section-label">📐 投資組合分析</div>', unsafe_allow_html=True)
@@ -332,7 +325,7 @@ with col6:
               "金開心現金流試算強化版，功能更完整",
               "https://jeqqkxvlpgljdeyxf8kuuh.streamlit.app/")
 
-# ── 回測工具 ──
+# ── 回測分析 ──
 st.markdown('<div class="section-label">🔬 回測分析</div>', unsafe_allow_html=True)
 col7, col8 = st.columns(2)
 
@@ -340,6 +333,9 @@ with col7:
     tool_card("📉", "動態鎖利回測",
               "設定動態停利條件，回測不同市場環境下的鎖利效益",
               "https://dynamic-take-profit-7hzznb5ki425dlgrsqptl9.streamlit.app/")
+    tool_card("💱", "雙元貨幣 (DCI) 回測",
+              "DCI 歷史勝率與各情境回測分析",
+              "https://edltm57vf5rtwkpeewcsb7.streamlit.app/")
 
 with col8:
     tool_card("📊", "A 跌多少後進場勝率分析",
