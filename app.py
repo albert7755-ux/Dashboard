@@ -250,7 +250,7 @@ st.markdown("""
     <div class="portal-icon">✈️</div>
     <div>
         <div class="portal-title">Captain Albert Fan &nbsp;<span>投資機長箱</span></div>
-        <div class="portal-subtitle">Internal Tools Portal · 富邦西湖財管 · 僅供內部使用</div>
+        <div class="portal-subtitle">Internal Tools Portal · <<艾爾伯有話要說之工具就像衣櫃裡的衣服 不嫌多>> </div>
     </div>
 </div>
 """, unsafe_allow_html=True)
