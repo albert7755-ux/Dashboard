@@ -325,6 +325,13 @@ with col6:
               "金開心現金流試算強化版，功能更完整",
               "https://jeqqkxvlpgljdeyxf8kuuh.streamlit.app/")
 
+# ── 文章庫 ──
+st.markdown('<div class="section-label">📚 文章庫</div>', unsafe_allow_html=True)
+
+tool_card("🦞", "龍蝦文章・旅遊資料庫",
+          "Albert Claw Bot 收藏的文章與旅遊資訊資料庫",
+          "https://eln-bot.onrender.com/articles")
+
 # ── 回測分析 ──
 st.markdown('<div class="section-label">🔬 回測分析</div>', unsafe_allow_html=True)
 col7, col8 = st.columns(2)
