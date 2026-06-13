@@ -301,6 +301,9 @@ st.markdown('<div class="section-label">📈 債券工具</div>', unsafe_allow_h
 tool_card("📉", "常賣債券績效比較",
           "本行常見債券歷史績效走勢比較，含息總報酬分析",
           "https://bond-backtest-dnubuhdxkunvwf6fdhsnv3.streamlit.app/")
+tool_card("📊", "債券＆基金績效比較器",
+          "債券與基金跨類別績效對比，多期間含息總報酬分析，支援 PDF 報告輸出",
+          "https://comparison-of-bonds-and-funds-cx8ye7qvgwxihwjnz6equb.streamlit.app/")
 
 # ── 投資組合工具 ──
 st.markdown('<div class="section-label">📐 投資組合分析</div>', unsafe_allow_html=True)
@@ -348,12 +351,15 @@ with col8:
     tool_card("📊", "A 跌多少後進場勝率分析",
               "指數/個股下跌 X% 後進場，各天期持有勝率統計",
               "https://sp500-backtest-lq7ryyzwnbgtvh2es6zhzv.streamlit.app/")
+    tool_card("🏖️", "退休提領回測工具",
+              "固定提領 vs. Guyton-Klinger 動態提領回測，支援 0050 / 自選標的歷史報酬模擬",
+              "https://withdrawalbacktest-wfvy52pf9gnum4atoftawx.streamlit.app/")
 
 # ── 底部 ──
 st.markdown("""
 <div class="portal-footer">
     ✈️ &nbsp; CAPTAIN ALBERT FAN · 投資機長箱 &nbsp; · &nbsp;
-    富邦銀行西湖分行財富管理 &nbsp; · &nbsp;
+    台北富邦銀行 &nbsp; · &nbsp;
     僅供內部教育訓練使用，請勿外流
 </div>
 """, unsafe_allow_html=True)
