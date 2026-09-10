@@ -72,7 +72,7 @@ if not st.session_state.authenticated:
 
     col1, col2, col3 = st.columns([2, 1, 2])
     with col2:
-        pwd = st.text_input("", placeholder="輸入授權碼", type="password", label_visibility="collapsed")
+        pwd = st.text_input("授權碼", placeholder="輸入授權碼", type="password", label_visibility="collapsed")
         if pwd:
             if pwd == st.secrets.get("PORTAL_PASSWORD", "5428"):
                 st.session_state.authenticated = True
@@ -250,7 +250,7 @@ st.markdown("""
     <div class="portal-icon">✈️</div>
     <div>
         <div class="portal-title">Captain Albert Fan &nbsp;<span>投資機長箱</span></div>
-        <div class="portal-subtitle">Internal Tools Portal · <<艾爾伯有話要說之工具就像衣櫃裡的衣服 不嫌多>> </div>
+        <div class="portal-subtitle">Internal Tools Portal · &laquo;艾爾伯有話要說之工具就像衣櫃裡的衣服 不嫌多&raquo;</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -327,6 +327,20 @@ with col6:
     tool_card("💰", "金開心強化版",
               "金開心現金流試算強化版，功能更完整",
               "https://jeqqkxvlpgljdeyxf8kuuh.streamlit.app/")
+
+# ── 個股估值 ──
+st.markdown('<div class="section-label">🎯 個股估值</div>', unsafe_allow_html=True)
+col9, col10 = st.columns(2)
+
+with col9:
+    tool_card("🎯", "多模型估值儀表板",
+              "8 種模型交叉驗證合理股價：DCF／Reverse DCF／本益比／PEG／P-B／EV-EBITDA／DDM／殖利率法",
+              "https://dcf12345.streamlit.app/")
+
+with col10:
+    tool_card("📐", "同業比較 ＆ 估值軌跡",
+              "同上工具內建：最多 6 檔同業倍數評分、本益比河流圖、P/E 與 P/B 五年歷史位階",
+              "https://dcf12345.streamlit.app/")
 
 # ── 文章庫 ──
 st.markdown('<div class="section-label">📚 文章庫</div>', unsafe_allow_html=True)
