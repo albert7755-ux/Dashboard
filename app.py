@@ -294,6 +294,9 @@ with col2:
     tool_card("📧", "ELN 追蹤 · Mail 通知",
               "ELN 部位自動追蹤，觸發條件寄送 Email 通知",
               "https://eln-auto-tracking-b67rpsggez8my2adgfdt3t.streamlit.app/")
+    tool_card("📝", "ELN 商品登錄系統",
+              "理專登錄 FCN／DRA／BEN 商品條件（Strike／KO／KI／天期），可查清單並匯出 Excel",
+              "https://eln-bot.onrender.com/eln-form")
 
 # ── 債券工具 ──
 st.markdown('<div class="section-label">📈 債券工具</div>', unsafe_allow_html=True)
