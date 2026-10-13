@@ -6,14 +6,13 @@ import streamlit as st
 # 引號裡留空 ""，那張卡片就會顯示「即將上線」。
 # ==========================================
 GAME_URLS = {
-    "債速配":       "",   # 債速配 Bond Match 排位賽
-    "固收七人組":   "",   # 認人翻牌遊戲
-    "評等分類蛇":   "",   # 貪食蛇
-    "債衝刺":       "",   # Bond Dash 即時多人賽跑
-    "債券賽車":     "",   # 忠孝東路開到 101
-    "環繞飛行":     "",   # 富邦大樓環繞飛行
-    "配息日":       "",   # 接配息節奏遊戲
-    "大森林小森林": "",   # 森林投資性格測驗
+    "固收七人組":   "https://flip-game-hrltq72nebzbugpk4b6mqy.streamlit.app/",   # 認人翻牌遊戲
+    "評等分類蛇":   "https://snake-rating-eofclbbu29rakhqmofmlxr.streamlit.app/",   # 貪食蛇
+    "債衝刺":       "https://running-game-2ku3dahwnemzswvdllsxbq.streamlit.app/",   # Bond Dash 即時多人賽跑
+    "債券賽車":     "https://drive-game-in-real-world-5tdsux23dkhwznkjhkxtvs.streamlit.app/",   # 忠孝東路開到 101
+    "環繞飛行":     "https://game-flight-to-fubon-skyzsfhcycggsxgc7bfbps.streamlit.app/",   # 富邦大樓環繞飛行
+    "環繞飛行多人版":     "https://multiplay-fight-to-fubon-u2mk8jk5wkbftxzsccgi9a.streamlit.app/",   # 富邦大樓環繞飛行多人版
+    "大森林小森林": "https://claude.ai/artifact/4ycoZeKiryqmDKhrimAxpy",   # 森林投資性格測驗
 }
 
 st.set_page_config(
