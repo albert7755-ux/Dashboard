@@ -1,5 +1,21 @@
 import streamlit as st
 
+# ==========================================
+# 🎮 遊戲網址清單（只要改這裡！）
+# 把每個遊戲的 Streamlit 網址貼進引號裡面。
+# 引號裡留空 ""，那張卡片就會顯示「即將上線」。
+# ==========================================
+GAME_URLS = {
+    "債速配":       "",   # 債速配 Bond Match 排位賽
+    "固收七人組":   "",   # 認人翻牌遊戲
+    "評等分類蛇":   "",   # 貪食蛇
+    "債衝刺":       "",   # Bond Dash 即時多人賽跑
+    "債券賽車":     "",   # 忠孝東路開到 101
+    "環繞飛行":     "",   # 富邦大樓環繞飛行
+    "配息日":       "",   # 接配息節奏遊戲
+    "大森林小森林": "",   # 森林投資性格測驗
+}
+
 st.set_page_config(
     page_title="投資機長箱 | Captain Albert Fan",
     page_icon="✈️",
@@ -228,6 +244,27 @@ st.markdown("""
     transform: translateX(3px);
 }
 
+/* 尚未上線的卡片 */
+.tool-card.soon {
+    opacity: 0.45;
+    cursor: default;
+}
+.tool-card.soon:hover {
+    transform: none;
+    border-color: #1e2d42;
+    box-shadow: none;
+}
+.tool-card.soon:hover::before { opacity: 0; }
+.soon-tag {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.65rem;
+    color: #8899bb;
+    border: 1px solid #2a3a50;
+    border-radius: 10px;
+    padding: 2px 8px;
+    white-space: nowrap;
+}
+
 /* 底部 */
 .portal-footer {
     margin-top: 48px;
@@ -259,6 +296,21 @@ st.markdown("""
 # 工具清單
 # ==========================================
 def tool_card(emoji, name, desc, url):
+    # 還沒有網址 → 顯示灰色「即將上線」卡片
+    if not url:
+        st.markdown(f"""
+        <div class="tool-card soon">
+            <div class="tool-card-inner">
+                <div class="tool-emoji">{emoji}</div>
+                <div class="tool-info">
+                    <div class="tool-name">{name}</div>
+                    <div class="tool-desc">{desc}</div>
+                </div>
+                <div class="soon-tag">即將上線</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        return
     st.markdown(f"""
     <a href="{url}" target="_blank" class="tool-card">
         <div class="tool-card-inner">
@@ -307,6 +359,38 @@ tool_card("📉", "常賣債券績效比較",
 tool_card("📊", "債券＆基金績效比較器",
           "債券與基金跨類別績效對比，多期間含息總報酬分析，支援 PDF 報告輸出",
           "https://comparison-of-bonds-and-funds-cx8ye7qvgwxihwjnz6equb.streamlit.app/")
+
+# ── 債券小遊戲 ──
+st.markdown('<div class="section-label">🎮 債券小遊戲</div>', unsafe_allow_html=True)
+colg1, colg2 = st.columns(2)
+
+with colg1:
+    tool_card("🃏", "債速配 Bond Match 排位賽",
+              "翻牌配對單檔債券條件（代號／YTM／申購價／發行人），全站排行榜",
+              GAME_URLS["債速配"])
+    tool_card("🐍", "評等分類蛇",
+              "只吃投資等級（BBB- / Baa3 以上），誤食垃圾債扣血，手機滑動就能玩",
+              GAME_URLS["評等分類蛇"])
+    tool_card("🏎️", "債券賽車",
+              "忠孝東路一路開到台北 101，沿路看債券條件、終點答題",
+              GAME_URLS["債券賽車"])
+    tool_card("💧", "配息日",
+              "月配／季配／半年配三軌接配息，到期續做選券",
+              GAME_URLS["配息日"])
+
+with colg2:
+    tool_card("🏃", "債衝刺 Bond Dash",
+              "最多 8 人即時賽跑，狂點衝刺、選債券跑鞋、Fed 升降息逆順風",
+              GAME_URLS["債衝刺"])
+    tool_card("👥", "固收七人組 Team Match",
+              "認人翻牌：配對固收科成員名字與照片，認識我們團隊",
+              GAME_URLS["固收七人組"])
+    tool_card("✈️", "富邦大樓環繞飛行",
+              "第一人稱駕駛飛機繞富邦大樓，途中認識一檔債券條件",
+              GAME_URLS["環繞飛行"])
+    tool_card("🌳", "大森林小森林",
+              "三題第一人稱心理測驗，看看你是哪一種債券投資性格",
+              GAME_URLS["大森林小森林"])
 
 # ── 投資組合工具 ──
 st.markdown('<div class="section-label">📐 投資組合分析</div>', unsafe_allow_html=True)
