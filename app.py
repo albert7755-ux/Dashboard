@@ -394,6 +394,9 @@ with col5:
     tool_card("💼", "基金投組匯率避險分析",
               "基金組合匯率風險評估與避險策略試算",
               "https://5bhfmyrz5pyzymrzd68tfk.streamlit.app/")
+    tool_card("💰", "金開心總行報價版",
+              "串接總行最新債券報價，試算每月配息現金流；含換券前後比較、利率敏感度與 PDF 報告",
+              "https://jin-with-lobster-dypukeq3qsvyomhvdnlea8.streamlit.app/")
 
 with col6:
     tool_card("🎲", "投組優化＋滾動＋蒙地卡羅",
