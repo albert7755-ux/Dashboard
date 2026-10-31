@@ -6,6 +6,7 @@ import streamlit as st
 # 引號裡留空 ""，那張卡片就會顯示「即將上線」。
 # ==========================================
 GAME_URLS = {
+    "債券知識島":   "https://bond-islands-app-o5w4gswyhgsjuuyj8yj5kc.streamlit.app/",   # 海外債知識群島
     "固收七人組":   "https://flip-game-hrltq72nebzbugpk4b6mqy.streamlit.app/",   # 認人翻牌遊戲
     "評等分類蛇":   "https://snake-rating-eofclbbu29rakhqmofmlxr.streamlit.app/",   # 貪食蛇
     "債衝刺":       "https://running-game-2ku3dahwnemzswvdllsxbq.streamlit.app/",   # Bond Dash 即時多人賽跑
@@ -13,6 +14,9 @@ GAME_URLS = {
     "環繞飛行":     "https://game-flight-to-fubon-skyzsfhcycggsxgc7bfbps.streamlit.app/",   # 富邦大樓環繞飛行
     "環繞飛行多人版":     "https://multiplay-fight-to-fubon-u2mk8jk5wkbftxzsccgi9a.streamlit.app/",   # 富邦大樓環繞飛行多人版
     "大森林小森林": "https://claude.ai/artifact/4ycoZeKiryqmDKhrimAxpy",   # 森林投資性格測驗
+    "Yield Runner": "https://tcatqqmrdd5wg3nz5saezj.streamlit.app/",   # 飛天跑車
+    "火箭回收":     "https://rookie-landing-cfobewj9qncgtfycbrffez.streamlit.app/",   # SpaceX 火箭降落
+    "峽谷飛行":     "https://flying-in-the-mountain-mgdpnmris5zog926auhma5.streamlit.app/",   # 峽谷鬼影計時賽
 }
 
 st.set_page_config(
@@ -365,6 +369,10 @@ st.markdown('<div class="section-label">🎮 債券小遊戲</div>', unsafe_allo
 # 每個遊戲的圖示、卡片標題、說明（名字要跟最上面 GAME_URLS 的一樣）
 # 在 GAME_URLS 新增了這裡沒有的遊戲也沒關係，會用預設的 🎮 圖示顯示
 GAME_INFO = {
+    "債券知識島":     ("🏝️", "債券知識島", "森友會風格海外債知識群島：債券條件、本行規定、成交故事，還有遊樂園島可以玩遊戲"),
+    "Yield Runner":   ("🚗", "Yield Runner", "駕駛飛天跑車穿梭車陣，衝刺、噴射跳躍，和同事即時 PK"),
+    "火箭回收":       ("🚀", "回收吧債券火箭", "選一檔債券當火箭出發，債券條件決定火箭性能，穩穩降落回收"),
+    "峽谷飛行":       ("🛫", "峽谷鬼影計時賽", "戰機座艙視角低空穿越峽谷，追鬼影、飛進正確答案的閘門"),
     "債速配":         ("🃏", "債速配 Bond Match 排位賽", "翻牌配對單檔債券條件（代號／YTM／申購價／發行人），全站排行榜"),
     "固收七人組":     ("👥", "固收七人組 Team Match", "認人翻牌：配對固收科成員名字與照片，認識我們團隊"),
     "評等分類蛇":     ("🐍", "評等分類蛇", "只吃投資等級（BBB- / Baa3 以上），誤食垃圾債扣血，手機滑動就能玩"),
