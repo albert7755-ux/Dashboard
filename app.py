@@ -17,6 +17,7 @@ GAME_URLS = {
     "Yield Runner": "https://tcatqqmrdd5wg3nz5saezj.streamlit.app/",   # 飛天跑車
     "火箭回收":     "https://rookie-landing-cfobewj9qncgtfycbrffez.streamlit.app/",   # SpaceX 火箭降落
     "峽谷飛行":     "https://flying-in-the-mountain-mgdpnmris5zog926auhma5.streamlit.app/",   # 峽谷鬼影計時賽
+    "殖利率碼表":   "https://yieldstopwatch-ek4w3hcf5lbj5jmyvzxqjk.streamlit.app/",   # 碼表停表
 }
 
 st.set_page_config(
@@ -369,6 +370,7 @@ st.markdown('<div class="section-label">🎮 債券小遊戲</div>', unsafe_allo
 # 每個遊戲的圖示、卡片標題、說明（名字要跟最上面 GAME_URLS 的一樣）
 # 在 GAME_URLS 新增了這裡沒有的遊戲也沒關係，會用預設的 🎮 圖示顯示
 GAME_INFO = {
+    "殖利率碼表":     ("⏱️", "殖利率碼表", "先答對債券殖利率，再把碼表按停在那個秒數，三回合拚滿分 300"),
     "債券知識島":     ("🏝️", "債券知識島", "森友會風格海外債知識群島：債券條件、本行規定、成交故事，還有遊樂園島可以玩遊戲"),
     "Yield Runner":   ("🚗", "Yield Runner", "駕駛飛天跑車穿梭車陣，衝刺、噴射跳躍，和同事即時 PK"),
     "火箭回收":       ("🚀", "回收吧債券火箭", "選一檔債券當火箭出發，債券條件決定火箭性能，穩穩降落回收"),
