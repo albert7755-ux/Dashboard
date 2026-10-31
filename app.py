@@ -460,6 +460,23 @@ with col8:
               "固定提領 vs. Guyton-Klinger 動態提領回測，支援 0050 / 自選標的歷史報酬模擬",
               "https://withdrawalbacktest-wfvy52pf9gnum4atoftawx.streamlit.app/")
 
+# ── 管理後台 ──
+st.markdown('<div class="section-label">🔧 管理後台</div>', unsafe_allow_html=True)
+cola1, cola2 = st.columns(2)
+
+with cola1:
+    tool_card("📤", "知識島上傳頁",
+              "上傳債市每日聚焦、主推發行機構、熱銷前十大與全島廣播",
+              "https://bond-islands-app-o5w4gswyhgsjuuyj8yj5kc.streamlit.app/?admin=1")
+    tool_card("🎓", "知識島處長出題",
+              "設定知識島上處長們的題目",
+              "https://bond-islands-app-o5w4gswyhgsjuuyj8yj5kc.streamlit.app/?quiz=1")
+
+with cola2:
+    tool_card("📑", "債券報價檔上傳",
+              "上傳總行債券報價檔給龍蝦Bot，更新報價、配息雷達與知識島熱銷前十大",
+              "https://eln-bot.onrender.com/bond-upload")
+
 # ── 底部 ──
 st.markdown("""
 <div class="portal-footer">
