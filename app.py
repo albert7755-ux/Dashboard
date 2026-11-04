@@ -363,6 +363,9 @@ tool_card("📉", "常賣債券績效比較",
 tool_card("📊", "債券＆基金績效比較器",
           "債券與基金跨類別績效對比，多期間含息總報酬分析，支援 PDF 報告輸出",
           "https://comparison-of-bonds-and-funds-cx8ye7qvgwxihwjnz6equb.streamlit.app/")
+tool_card("🏦", "一般信託質借試算",
+          "債券設質借台幣、動用資金再買海外債：可借上限、擔保維持率、補倉線與續約壓力測試",
+          "https://pledge-calc-a92yhnjyjszk76wczyergw.streamlit.app/")
 
 # ── 債券小遊戲 ──
 st.markdown('<div class="section-label">🎮 債券小遊戲</div>', unsafe_allow_html=True)
