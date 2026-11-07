@@ -1,0 +1,30 @@
+name: 叫醒 Streamlit App
+
+on:
+  schedule:
+    # 每 6 小時跑一次（UTC 時間，第 17 分鐘開始，避開整點塞車）
+    - cron: "17 */6 * * *"
+  # 可以在 GitHub 網頁上手動按按鈕執行
+  workflow_dispatch:
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安裝瀏覽器工具
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: 去逛每一個 app
+        run: python keepalive/wake.py
